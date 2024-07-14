@@ -27,6 +27,7 @@ addSpan.addEventListener('click', function(){
     let lists = document.createElement('li');
     lists.innerText = enterInput.value;
     listedItems.appendChild(lists);
+    enterInput.value = "";
 })
 
 
