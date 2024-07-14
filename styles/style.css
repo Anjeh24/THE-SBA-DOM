@@ -3,8 +3,9 @@
 #main-div{
     border: 2px white;
     padding: 20%;
-    margin: 5%;
-    margin-left:27% ;
+    /*margin: 5%;
+    margin-left:27% ;*/
+    margin: 0 auto;
     background-image:url(../images/pexels-adonyi-foto-1414651.jpg) ;
     background-size: cover; /*used to make background image fit */
     border-radius: 5%;
@@ -16,3 +17,20 @@
    height: 100%;
 }
 
+#inner-div{
+    border: 1px, white;
+    width: 500px;
+    height: 500px;
+    background-color: aliceblue;
+    
+}
+
+span{
+    border: 1px solid gray;
+}
+
+.spandiv{
+    text-align: center;
+   padding-top: 5%;
+
+}

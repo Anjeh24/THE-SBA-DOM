@@ -9,6 +9,28 @@ header1.style.textAlign = "center";
 let outerDiv = document.querySelector('#main-div'); //queryselector
 outerDiv.style.borderStyle = "solid";
 
+header1.parentNode.style.margin = "20px"; //styling the margin of the body element since it is the parent to header1/parentNode
+
+window.document.getElementById('inner-div').borderStyle = 'solid'; //BOM
+
+const newNode = header1;
+const headClone = newNode.cloneNode(false); //To leave the clone empty with no text in it
+document.getElementById('main-div').prepend(headClone); //Attaching h1 tag clone to top of main div.
+headClone.innerText = "My Grocery List";
+headClone.style.backgroundColor = "#77DD77";
+
+let enterInput = document.getElementById('listItems')
+let addSpan = document.getElementById('addpsan');
+let listedItems = document.getElementById('itemsHolder');
+
+addSpan.addEventListener('click', function(){
+    let lists = document.createElement('li');
+    lists.innerText = enterInput.value;
+    listedItems.appendChild(lists);
+})
+
+
+
 
 
 
