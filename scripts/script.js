@@ -25,14 +25,14 @@ let listedItems = document.getElementById('itemsHolder');
 let innermstDiv = document.getElementById('spandiv')
 
 
-enterInput.addEventListener('onmouseover', function (){
+enterInput.addEventListener('mouseover', function (){
     enterInput.style.backgroundColor = "#FFFDE7 ";
 });
 // enterInput.addEventListener('onmouseover', function(){
 //     target.style.backgroundColor = "#FFFDE7 ";
     
 // })
-enterInput.addEventListener('onmouseout', function(){
+enterInput.addEventListener('mouseout', function(){
    enterInput.style.backgroundColor = "white ";
     
 });
