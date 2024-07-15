@@ -22,7 +22,6 @@ headClone.style.backgroundColor = "#77DD77";
 let enterInput = window.document.getElementById('listItems')//BOM
 let addSpan = document.getElementById('addpsan');
 let listedItems = document.getElementById('itemsHolder');
-let deletebtn = document.createElement('span');
 let innermstDiv = document.getElementById('spandiv')
 
 
@@ -50,11 +49,12 @@ if (enterInput.value == ''){
     listedItems.appendChild(lists);
     enterInput.value = "";
    
+    let deletebtn = document.createElement('span');
+    deletebtn.className = "deleet";
     const txtnodes = document.createTextNode = "\u00D7";
     console.log(txtnodes);
+    deletebtn.appendChild(this.tabIndex);;
     
-    deletebtn.className = "deleet";
-    deletebtn.appendChild(txtnodes);
     lists.appendChild(deletebtn);
     for (let i = 0; i < lists.length; i++){
         if (lists[i].innerText != ''){
