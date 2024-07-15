@@ -22,13 +22,30 @@ headClone.style.backgroundColor = "#77DD77";
 let enterInput = document.getElementById('listItems')
 let addSpan = document.getElementById('addpsan');
 let listedItems = document.getElementById('itemsHolder');
+let deletebtn = document.createElement('span');
 
 addSpan.addEventListener('click', function(){
+if (enterInput.value == ''){
+    alert("Enter an item to add to list please!");
+}else {
+
     let lists = document.createElement('li');
     lists.innerText = enterInput.value;
     listedItems.appendChild(lists);
+   
     enterInput.value = "";
+  }
 })
+
+//    for (let i = 0; i < lists.length; i++){
+//     if (lists[i].innerText != " "){
+//         deletebtn.value = "U+00D7";
+//        lists[i].appendChild('deletebtn');
+       
+//     }
+//    }
+//     //lists.addEventListener()
+// })
 
 
 
