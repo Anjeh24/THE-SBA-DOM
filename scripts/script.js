@@ -19,12 +19,28 @@ document.getElementById('main-div').prepend(headClone); //Attaching h1 tag clone
 headClone.innerText = "My Grocery List";
 headClone.style.backgroundColor = "#77DD77";
 
-let enterInput = document.getElementById('listItems')
+let enterInput = window.document.getElementById('listItems')//BOM
 let addSpan = document.getElementById('addpsan');
 let listedItems = document.getElementById('itemsHolder');
 let deletebtn = document.createElement('span');
+let innermstDiv = document.getElementById('spandiv')
+
+
+enterInput.addEventListener('onmouseover', function (){
+    enterInput.style.backgroundColor = "#FFFDE7 ";
+});
+// enterInput.addEventListener('onmouseover', function(){
+//     target.style.backgroundColor = "#FFFDE7 ";
+    
+// })
+enterInput.addEventListener('onmouseout', function(){
+   enterInput.style.backgroundColor = "white ";
+    
+});
+
 
 addSpan.addEventListener('click', function(){
+
 if (enterInput.value == ''){
     alert("Enter an item to add to list please!");
 }else {
@@ -32,20 +48,32 @@ if (enterInput.value == ''){
     let lists = document.createElement('li');
     lists.innerText = enterInput.value;
     listedItems.appendChild(lists);
-   
     enterInput.value = "";
+   
+    const txtnodes = document.createTextNode = "\u00D7";
+    console.log(txtnodes);
+    
+    deletebtn.className = "deleet";
+    deletebtn.appendChild(txtnodes);
+    lists.appendChild(deletebtn);
+    for (let i = 0; i < lists.length; i++){
+        if (lists[i].innerText != ''){
+            listedItems[i].appendChild('deletebtn'); //trying to create and append delete button
+          
+        }
+      }
+    
+   
   }
-})
 
-//    for (let i = 0; i < lists.length; i++){
-//     if (lists[i].innerText != " "){
-//         deletebtn.value = "U+00D7";
-//        lists[i].appendChild('deletebtn');
-       
-//     }
-//    }
-//     //lists.addEventListener()
-// })
+  
+
+})
+   
+
+
+     
+ 
 
 
 
