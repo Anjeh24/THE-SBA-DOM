@@ -49,17 +49,18 @@ if (enterInput.value == ''){
     listedItems.appendChild(lists);
     enterInput.value = "";
    
-    let deletebtn = document.createElement('span');
-    deletebtn.className = "deleet";
-    const txtnodes = document.createTextNode = "\u00D7";
-    console.log(txtnodes);
-    deletebtn.appendChild(this.tabIndex);;
+    //creating and appending delete button
+    let deleteSpan = document.createElement('span');
+    const xBtn = document.createTextNode = "\u00D7";
+    deleteSpan.className = "deleet";
+    deleteSpan.appendChild(xBtn);
+    lists.appendChild(deleteSpan);
     
-    lists.appendChild(deletebtn);
-    for (let i = 0; i < lists.length; i++){
-        if (lists[i].innerText != ''){
-            listedItems[i].appendChild('deletebtn'); //trying to create and append delete button
-          
+    //loop through list and apply function to every element which would be triggered once list's child is clicked on
+     for (let i = 0; i < lists.length; i++){
+        xBtn.addEventListener('click', function(){ 
+          xBtn.parentNode.remove(); //remove list item once span that contains 'x' is clicked on
+        })
         }
       }
     
