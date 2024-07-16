@@ -55,21 +55,16 @@ if (enterInput.value == ''){
     deleteSpan.className = "deleet";
     deleteSpan.appendChild(xBtn);
     lists.appendChild(deleteSpan);
-    
-    //loop through list and apply function to every element which would be triggered once list's child is clicked on
-     for (let i = 0; i < lists.length; i++){
-        xBtn.addEventListener('click', function(){ 
-          xBtn.parentNode.remove(); //remove list item once span that contains 'x' is clicked on
-        })
+
+//loop to change background color of list element if index is even
+    for (let i = 0; i < lists.length; i++){
+        if (lists[i] % 2 == 0){
+            lists[i].style.backgroundColor = "grey";
         }
-      }
+    }
     
-   
-  }
-
-  
-
-})
+      }
+    })
    
 
 
