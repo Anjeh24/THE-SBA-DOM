@@ -55,7 +55,7 @@ if (enterInput.value == ''){
     deleteSpan.style.marginLeft = "40%"; //added margin to create space between list elements and 'x' icon in span
     const xBtn = document.createTextNode = "\u2715";
     
-    console.log(xBtn);
+    //console.log(xBtn);
     deleteSpan.className = "deleet";
     deleteSpan.textContent = xBtn;
     lists.appendChild(deleteSpan);
@@ -64,12 +64,13 @@ if (enterInput.value == ''){
          lists.remove();
     });
 //loop to change background color of list element if index is even
-    for (let i = 0; i < lists.length; i++){
-        if (i % 2 == 0){
-            i.style.backgroundColor = "grey";
+    for (i = 0; i < lists.length; i++){
+        if (i % 2 === 0){
+            i.style.backgroundColor = 'grey';
         }
     }
-    
+// 
+   
       }
     })
    
