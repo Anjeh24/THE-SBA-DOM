@@ -52,8 +52,9 @@ if (enterInput.value == ''){
     //creating and appending delete button
     let deleteSpan = document.createElement('span');
     const xBtn = document.createTextNode = "\u00D7";
+    console.log(xBtn);
     deleteSpan.className = "deleet";
-    deleteSpan.appendChild(xBtn);
+    deleteSpan.textContent = " " + xBtn;
     lists.appendChild(deleteSpan);
 
 //loop to change background color of list element if index is even
