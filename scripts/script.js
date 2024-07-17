@@ -45,22 +45,28 @@ if (enterInput.value == ''){
 }else {
 
     let lists = document.createElement('li');
+    
     lists.innerText = enterInput.value;
     listedItems.appendChild(lists);
     enterInput.value = "";
    
     //creating and appending delete button
     let deleteSpan = document.createElement('span');
-    const xBtn = document.createTextNode = "\u00D7";
+    deleteSpan.style.marginLeft = "40%"; //added margin to create space between list elements and 'x' icon in span
+    const xBtn = document.createTextNode = "\u2715";
+    
     console.log(xBtn);
     deleteSpan.className = "deleet";
-    deleteSpan.textContent = " " + xBtn;
+    deleteSpan.textContent = xBtn;
     lists.appendChild(deleteSpan);
-
+//arrow function to remove list elements when span 'x' icon is deleted
+    deleteSpan.addEventListener('click', () => {
+         lists.remove();
+    });
 //loop to change background color of list element if index is even
     for (let i = 0; i < lists.length; i++){
-        if (lists[i] % 2 == 0){
-            lists[i].style.backgroundColor = "grey";
+        if (i % 2 == 0){
+            i.style.backgroundColor = "grey";
         }
     }
     
